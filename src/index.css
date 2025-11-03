@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Global site background and text according to the requested palette */
+    @apply bg-site-bg text-primary font-sans;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* subtle, professional card surface without gradients */
+  .card-dark {
+    background: rgba(255,255,255,0.02); /* tiny lift from pure black */
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 0.75rem;
+  }
+}
