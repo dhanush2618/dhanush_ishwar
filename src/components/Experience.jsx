@@ -9,10 +9,11 @@ const Experience = () => {
       location: 'Silchar, India',
       duration: '15 Jun 2025 – 15 Jul 2025',
       description: [
-        'Worked on Generative Adversarial Networks (GANs) for creating synthetic medical images of rare diseases',
-        'Researched data augmentation techniques to address the challenge of limited medical datasets',
-        'Explored potential applications of GAN-generated images in improving training data for diagnostic AI models'
+        'Researched Generative Adversarial Networks (GANs) for synthesizing medical images of rare conditions.',
+        'Evaluated augmentation strategies to mitigate limited dataset issues in clinical imaging.',
+        'Outlined quality checks and bias considerations for using synthetic data in diagnostic AI.'
       ],
+      tags: ['GANs', 'Medical Imaging', 'Data Augmentation'],
       color: 'accent-purple'
     },
     {
@@ -21,10 +22,11 @@ const Experience = () => {
       location: 'Chennai, India',
       duration: '01 Feb 2024 – 05 Feb 2024',
       description: [
-        'Internship at Hyundai Motors India Ltd. with exposure to cloud-based tools used in automotive operations',
-        'Understood potential applications of AI/ML in predictive maintenance, quality inspection, and process optimization',
-        'Gained familiarity with data handling workflows and their relevance to cloud and AIML integration in industry'
+        'Observed cloud tooling used in manufacturing operations and data capture workflows.',
+        'Mapped AI/ML opportunities: predictive maintenance, quality inspection, and process optimization.',
+        'Documented data handling constraints and integration points for future AIML pilots.'
       ],
+      tags: ['Cloud Tools', 'Automotive', 'AIML Use‑Cases'],
       color: 'accent-cyan'
     }
   ];
@@ -81,6 +83,16 @@ const Experience = () => {
                     </li>
                   ))}
                 </ul>
+
+                {exp.tags && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {exp.tags.map((t, i) => (
+                      <span key={i} className="px-2.5 py-1 text-[11px] rounded-md bg-[rgba(255,255,255,0.06)] text-secondary">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             </motion.div>
           ))}
